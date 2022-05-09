@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <!-- meta tag to adapt mobile phone device (in general to any device based on its width and scale)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--icon image  -->
+<link rel="icon" href="images/logo2.png">
+  <!-- link to css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- External links to google font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
+  <!--link source to java script -->
+  <script src="index2.js" defer></script>
+
+
+
+  <!--body is specified in css, but due specific stylization, the body is targetter individually -->
+
+  <style>
+    body {
+      /*The image is called inside the background with linear gradient to apply filter to highligth the website/app content*/
+      background:linear-gradient(rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)), url(images/backgif.gif);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+
+    }
+  </style>
+  <title>Register</title>
+</head>
+
+<body>
+
+  <!-- div to contain the form and its elements-->
+
+
+  <div class="login">
+    <!-- Anchor is used to probide an url for the image -->
+
+    <a href="index.html"><img class="logoimage" src="images/logo.png" alt=""></a>
+    <!-- Form tag automatically creates a "layout" for a form.
+  action tells the form (the button) where must go.
+  method tells the browser to request/collect or post data-->
+
+    <form class="formbox" action="Home.html" method="get">
+      <!--Div to create individual containers for each section of the form  -->
+
+      <div class="txt_area">
+        <label for="">Username</label>
+        <!-- Place holder is the text area. Required tag, interrupts the submit button action if the input is not filled.
+  Java script is applied in the input=name to be placed on home.html -->
+        <input type="text" id="name" name="name" placeholder="Username is required" required>
+      </div>
+
+      <div class="txt_area">
+        <label for="">Password</label>
+        <input id="myInput" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password is required" required>
+        <input style="width:auto;height:auto;margin:4px;" type="checkbox" onclick="myFunction()">Show Password
+
+        <!-- Style is added to this paragraph -->
+        <p style="color:black;font-weight:normal;background-color:rgba(255, 255, 255, 0.66);"> *The password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.</p>
+
+      </div>
+      <div class="submitbutton">
+        <button class="logbutton" type="submit">
+          <p>Login</p>
+        </button>
+
+        <label>
+          <!--check box input to recreate a "remember me" option. No real "remember me" option is applied to avoid possible scammer or pishing -->
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <div class="remember" style="width: max-content; margin-left: auto; padding:10px;">
+          <a style="padding:2px;color:white;" href="login.html">Already have an account?</a>
+        </div>
+
+      </div>
+
+
+    </form>
+  </div>
+
+
+  <footer>
+    <p>Follow us on social media</p> <a href="#">Twitter</a> <a href="#">Instagram</a>
+  </footer>
+
+
+
+  <script type="text/javascript">
+    /*Function is called when "myfunction" (onclick) is activated in the html input*/
+    function myFunction() {
+      /*id is referenced in the password input*/
+      var x = document.getElementById("myInput");
+      /*As the password input is type=password, it will automatically hide the data. This function commands when the type is password it has to change to type=text(which is visible)*/
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

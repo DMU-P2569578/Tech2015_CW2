@@ -1,0 +1,508 @@
+/*Body properties are specified individually in each html document, however some elements as font font family are universal to the app*/
+*{
+  /*Different font families are specified in case a browser is not able to read the font*/
+  font-family: 'Mulish', sans-serif, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+/*INDEX*/
+
+/*Navigation bar */
+nav{
+  margin: 2px;
+}
+
+nav ul{
+  float: right;
+   margin: 0 15px 0 0;
+   list-style: none;
+}
+
+nav ul li button{
+  border-radius: 10px;
+    padding: 8px;
+    border: none;
+    margin: 50% 0 50% 0;
+    background-color: rgba(255, 255, 255, 0.86);
+}
+
+nav li  a{
+  border-radius: 10px;
+  padding: 8px;
+  text-decoration: none;
+  color: black;
+
+}
+
+/*Each logo image is specified for the different pages they are used*/
+.logoimageindex{
+  display: block;
+  margin-left: 10px;
+  width: 199px;
+}
+.logoimage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 199px;
+}
+
+
+
+/* $ symbol is a call to "drag" the property set to other objects. in this case the $ is targeting the width and height of the .slider and it is going to be used in different objects. This is done
+in order to properly fit every element inside the slider and avoid bad functionalites as the images not preperly fiting the device*/
+.slider {
+  /*Position is set absolute to not interact based on the position of other elements*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*Transform and translating from the edges of the screen/device to center the slider*/
+  transform: translate(-50%, -50%);
+  /*Natural widht of the slider is changed to be adaptable to every device, image element is modified to to work, as image has it's own width*/
+  width: 70vw;
+  height: $slider-height;
+
+}
+/*The reference code has a z-index that has been eliminated as is not needed due this slider is not working over othe elements*/
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  width: $slider-width;
+  height: $slider-height;
+
+
+
+}
+
+.slides {
+  /*Flex position the element horizontally instead of the natural positioning that depends on the natural size of an element*/
+  display: flex;
+  position: relative;
+  top: 0;
+  left: -$slider-width;
+  /*Width is set to 100% instead of the */
+  width: 100%;
+}
+
+
+.slides.shifting {
+  transition: left .2s ease-out;
+}
+
+.slide {
+  width: $slider-width;
+  height: $slider-height;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 1s;
+  position: relative;
+  border-radius: 2px;
+}
+
+/*The size of the image is specified as the reference of the slider do not use images */
+.slides img {
+  width: 100%;
+  height: 50vh;
+}
+
+/*styling the controls*/
+.control {
+  position: absolute;
+  /*top is adjust in relation of the above elements. Control are placed in the midle from a vertical edge due it is set to 50%*/
+  top: 50%;
+  width: 34px;
+  margin: 34px 0 34px 0;
+  background: rgba(255, 255, 255, 0.44);
+  border-radius: 50px;
+  margin-top: -20px;
+  /*Z index is applied to show the buttons over the image*/
+  z-index: 1;
+}
+.prev,
+.next {
+
+  cursor: pointer;
+}
+
+/*Positioning the buttons from an horizontal edge. each button is targetted individually as the starting point is different*/
+.prev {
+  left: -20px;
+}
+
+.next {
+  right: -20px;
+}
+
+/*With active we are telling the device that when the elemnt specified is clicked, the specification between brackets must occur.*/
+.prev:active,
+.next:active {
+  /*When the button is pressed, they will be escalated*/
+  transform: scale(.8);
+}
+
+/* footer and sign up div.
+margin is applied as the slider div is positioned abolute, not allowing to place objects above or under. Using margin
+ option, the sign up div can be placed under the slider without interacting with it */
+
+
+.signup{
+  position: sticky;
+  text-align: center;
+  margin: 65vh 0 2vh 0;
+ text-decoration: none;
+ color: white;
+}
+
+.signup a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/*Footer has been specified for each page as the content is different*/
+.footerforindex{
+  text-align: center;
+  margin: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.38);
+}
+.footerforindex p{
+  padding: 4px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 1px;
+}
+
+
+
+/* SIGN UP an LOGIN
+*/
+
+
+/*Styling and positioning the form*/
+.login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border-radius: 40px;
+    padding: 10px;
+  }
+
+
+.login form{
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+form .txt_area{
+  position: relative;
+  margin: 5px 0;
+  font-family: 'Mulish';
+  font-weight: bold;
+  font-size: small;
+  color: white;
+
+}
+
+.txt_area input{
+  width: 100%;
+  padding: 0 5px;
+  margin: inherit;
+  height:  40px;
+border: 5px;
+background: white;
+outline: none;
+
+}
+
+.txt_area label{
+background-color: black;
+padding: 3px;
+
+}
+
+
+
+.submitbutton{
+    display: inline-grid;
+    font-weight: bold;
+    color: white;
+    margin: 20px;
+}
+
+.logbutton{
+  width: auto;
+  height: auto;
+border-radius: 34px;
+border: none;
+background-color: rgba(255, 255, 255, 0.57);
+cursor: pointer;
+
+
+}
+.logbutton p{
+  font-size: 1.1rem;
+  font-weight: bold;
+
+}
+
+
+
+/*TOON*/
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 4px;
+}
+
+.brand-title{
+  font-size: 1rem;
+  margin: .5rem;
+  font-family: "Mulish", sans-serif;
+}
+
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+.navbar-links  li{
+  list-style: none;
+}
+
+.navbar-links  li a{
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display:block;
+}
+
+.toggle-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar{
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+
+}
+
+
+/*Applying a media query to create the condition to toggle the nav bar.
+Toogle will appear when the screen size is 800px or below. Inside this mediaquery the css details a new navbarmenu */
+@media (max-width: 800px) {
+  .navbar {
+         flex-direction: column;
+         align-items: flex-start;
+     }
+  .toggle-button{
+    display: flex;
+  }
+
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+/*Styling the content of the app/website*/
+
+.maincontent{
+  background-image: url(https://twinfinite.net/wp-content/uploads/2021/03/Satoru_Gojo_arrives_on_the_battlefield_Anime-min.jpg);
+  background-repeat:  no-repeat;
+  background-position:   center;
+  background-size: cover;
+  margin: 0 0 5px 0;
+  padding: 100px 0 150px 0;
+
+}
+
+.content{
+margin: 0 15px 0 20px;
+padding: 5px;
+
+}
+
+
+.content a{
+  font-size: 20px;
+  display: inline;
+  text-decoration: none;
+  color: white;
+  background-color:rgba(0, 0, 0, 0.57);
+  padding: 5px;
+}
+
+
+
+/*Modal window*/
+
+
+.popup{
+/*display is set to none as the pop up is meant to appear for each title, which can be placed in different parts of the website/app*/
+  display: none;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+position: absolute;
+top: 0;
+z-index: 1;
+/*Z index is specified so the pop up do not interfere with the rest of the html content*/
+}
+
+
+.popup .insidepopup {
+  background-color: white;
+  padding: 2%;
+}
+
+.closeBtn{
+  float: right;
+  margin: 5px;
+}
+
+
+/*Toon slider/carousel*/
+
+/*Toon slider*/
+
+/*Position unset*/
+.carousel {
+  overflow: hidden;
+    max-width: 458px;
+    position: unset;
+    width: 100%;
+    margin: auto;
+}
+
+.carousel .carousel_item,
+.carousel .carousel_item--hidden {
+  display: none;
+}
+
+.carousel .carousel_item img {
+  max-width: 100%;
+  width: 100%;
+  height: 320px;
+}
+
+.carousel .carousel_item--visible {
+  display: block;
+  animation: fade 0.5s;
+}
+/*Specifying the animation to show the slides*/
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+/*display is used to justify the space and automatically set the location at both sides. Absolute interrups the size, making the area for the buttons to get tight to the other.
+This is solved by adding widht.
+
+Display is set to relative due the main content is set to absolute.
+*/
+.carousel .actions {
+  display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: unset;
+      top: 100%;
+      transform: translateY(-400%);
+}
+
+.carousel .actions button {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.carousel .actions button#prev {
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.38);
+}
+
+.carousel .actions button#next {
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.38);
+}
+
+
+
+
+
+/*WATCH
+video div is set to be placed in the midle of screen device and */
+
+.video{
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Footer*/
+footer{
+  text-align: center;
+  text-decoration: none;
+  margin: 90vh 0 0 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+footer p, a{
+  padding: 4px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}

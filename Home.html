@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>TOON</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!--icon image  -->
+<link rel="icon" href="images/logo2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
+
+  <style >
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!-- Navigation menu-->
+  <nav class="navbar">
+    <!-- section to place the name of the app/website and icon -->
+    <div class="brand-title">
+<!-- id name places the data requested from the form input=name -->
+      Welcome <img src="images/logo2.png" style="width:1rem;"alt="">, <span id="result-name" />
+    </div>
+    <!-- space to place a search bar-->
+    <div class="">
+      <form class="" action="#" method="get">
+        <input type="text" placeholder="..."> <button type="submit" name="button">Search</button>
+      </form>
+
+    </div>
+
+    <!--Hamburger menu element that will be displayed or hidded in funtion of screen size -->
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <!-- Menu element section-->
+    <div class="navbar-links">
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="login.html">Log out</a></li>
+          <li><a href="#">Help and FAQ</a></li>
+          <li><a href="#">Settings</a></li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+<!-- Space for the main content-->
+  <div class="maincontent" >
+    <div class="content">
+      <h1><a href="#" > Jujutsu Kaisen </a></h1> <br>
+      <p><a href="watch.html"> Watch now </a></p><br>
+      <!-- The id is added to reference the modal window and to point where the java script commands must be applied -->
+      <p id="infoJujutsu" ><a >More information</a>  </p>
+
+    </div>
+    <!-- Modal window container-->
+    <div class="popup" id="popupJujutsu">
+      <!-- Modal window content-->
+
+      <div class="insidepopup">
+        <div id="CloseBtn"class="closeBtn">Close information</div>
+        <h1>Jujutsu Kaisen</h1><br>
+        <p>2020 - 24 ep TV Series - Not finished </p><br>
+        <img src="images/maincontent.gif" style="width:100%;" alt="">
+        <p>A boy swallows by accident a cursed talisman - the finger of a demon -
+          and becomes cursed himself. He enters a shaman's school to be able to
+          locate the demon's other body parts and thus exorcise himself and other demons along the way.</p>
+
+        <a href="watch.html">Watch</a>
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+<!-- Slider -->
+<h2 style="color: white;margin: 10px;">Recently Added</h2>
+<!-- container -->
+  <div class="carousel">
+<!-- first slide classified as item visible. In java the first slide will be set to visible while the rest not. Due the -->
+    <div class="carousel_item  carousel_item--visible">
+      <img src="https://flxt.tmsimg.com/assets/p185179_b_v8_ab.jpg" alt="">
+    </div>
+
+    <div class="carousel_item">
+      <img src="https://play-lh.googleusercontent.com/HXE7K4ds1ZpLfRaP322XyduaPrmv9Rrj6yLE5pW_tnolp578tXjLKMZGF9k5xbfTfH97OQ" alt="">
+    </div>
+
+
+    <div class="carousel_item">
+      <img src="https://m.media-amazon.com/images/M/MV5BZjdmMjE0MWMtODRkZC00MDBiLWI4YWQtZjFmZmYwZWNjYTIxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="">
+    </div>
+    <div class="carousel_item">
+      <img src="https://resizing.flixster.com/aNL7j46jc3rvG7u_51lx5MJbU0M=/ems.ZW1zLXByZC1hc3NldHMvdHZzZXJpZXMvUlRUVjIwNDEwMy53ZWJw" alt="">
+    </div>
+    <div class="carousel_item">
+      <img src="https://static.wikia.nocookie.net/cartoonnetwork/images/9/95/Justice_League_TV_Series.jpg/revision/latest/scale-to-width-down/333?cb=20211209003032" alt="">
+    </div>
+
+<!-- buttons area-->
+    <div class="actions">
+      <button type="button" id="prev" >
+        <span style="color:black;font-size: xx-large;">&#8678;</span> </button>
+<!--inside the span the arrow code is applied -->
+          <button type="button" id="next" > <span style="color:black;font-size: xx-large;">&#8680;</span> </button>
+    </div>
+
+  </div>
+
+
+
+  <footer class="footerforindex">
+  <a href="#"> Condition of use</a>
+  <a href="#">Privacy note</a>
+  </footer>
+<script src="index2.js" defer></script>
+
+
+
+</body>
+
+</html>
