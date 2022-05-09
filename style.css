@@ -397,6 +397,9 @@ z-index: 1;
   padding: 2%;
 }
 
+.popup .insidepopup  a{
+  color: black;
+}
 .closeBtn{
   float: right;
   margin: 5px;
